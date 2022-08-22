@@ -1,0 +1,149 @@
+:root {
+    --text: #777781;
+    --title: #1E252D;
+
+    --bg: #F3EAE3;
+    --bg-cart: #ffffff;
+
+    --cor-p1: #3D8168;
+    --cor-p1h: #1A4031;
+}
+
+body {
+    margin: 0px;
+    background: var(--bg);
+    font-family: 'Montserrat',  sans-serif;
+    font-weight: 500;
+}
+h1, p, span {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.main-container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    display: grid;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cart-image img {
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.cart-info {
+    background: var(--bg-cart);
+    border-radius: 0 10px 10px 0;
+    padding: 30px;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    max-width: 10ch;
+    margin-bottom: 30px;
+    color: var(--title);
+}
+
+.info {
+    color: var(--text);
+    font-size: .875rem;
+    margin-bottom: 30px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    font-family: 'Fraunces', serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--cor-p1);
+    margin-bottom: 30px;
+}
+
+.price>span {
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 15px;
+    font-size: .4em;
+    text-decoration: line-through;
+    font-weight: 500;
+    border:none
+}
+
+.button {
+    display: flex;
+    background-color: var(--cor-p1);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--bg-cart);
+}
+
+
+.attribution {
+    font-size: 11px; text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 800px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+    }
+    .cart-image img {
+        border-radius: 10px 10px 0 0;
+    }
+    .cart-info {
+        border-radius: 0 0 10px 10px;
+    }
+    .subtitle {
+        font-size: .8em;
+        letter-spacing: .3em;
+        color: var(--text);
+        margin-bottom: 10px;
+    }
+    h1 {
+        font-size: 2em;
+        max-width: 15ch;
+        margin-bottom: 20px;
+    }
+    .info {
+        font-size: .875rem;
+        margin-bottom: 20px;
+    }
+    .price {
+        font-size: 2em;
+        font-weight: bold;
+        color: var(--cor-p1);
+        margin-bottom: 20px;
+    }
+}
