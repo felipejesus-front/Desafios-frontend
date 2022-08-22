@@ -118,7 +118,7 @@ h1 {
     color: hsl(228, 45%, 44%);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .main-container {
         grid-template-columns: 1fr;
         max-width: 350px;
