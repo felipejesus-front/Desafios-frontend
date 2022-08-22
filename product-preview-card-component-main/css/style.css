@@ -102,6 +102,10 @@ h1 {
     color: var(--bg-cart);
 }
 
+.button:hover {
+    background-color: var(--cor-p1h);
+}
+
 
 .attribution {
     font-size: 11px; text-align: center;
