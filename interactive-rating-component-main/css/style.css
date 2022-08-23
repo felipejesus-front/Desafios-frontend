@@ -60,7 +60,7 @@ p{
     
 }
 
-form label{
+label{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,7 +73,7 @@ form label{
     margin-bottom: 30px;
 }
 
-form button{
+button{
     width: 100%;
     padding-bottom: 15px;
     padding-top: 15px;
@@ -92,7 +92,7 @@ form button{
 }
 
 
-form input{
+input{
     position: absolute;
     top: 0;
     margin: 0;
