@@ -16,41 +16,39 @@
 
   <main class="container">
     <div class="main-container">
-      <img class="star" src="./images/icon-star.svg" alt="">
-      <h1>How did we do?</h1>
-      <P>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</P>
-        <div class="options">
-          <input type="radio" name="rating" value="1" id="1">
-          <label for="1">1</label>
-          
-          <input type="radio" name="rating" value="2" id="2">
-          <label for="2">2</label>
-          
-          <input type="radio" name="rating" value="3" id="3">
-          <label for="3">3</label>
-          
-          <input type="radio" name="rating" value="4" id="4">
-          <label for="4">4</label>
-          
-          <input type="radio" name="rating" value="5" id="5">
-          <label for="5">5</label>
-        </div>
-
-        <button type="submit">Submit</button>
+      <div id="pesquisa">
+        <img class="star" src="./images/icon-star.svg" alt="">
+        <h1>How did we do?</h1>
+        <P>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</P>
+          <div class="options">
+            <input type="radio" name="rating" value="1" id="1" onchange="pegarValor()">
+            <label for="1">1</label>
+            
+            <input type="radio" name="rating" value="2" id="2" onchange="pegarValor()">
+            <label for="2">2</label>
+            
+            <input type="radio" name="rating" value="3" id="3" onchange="pegarValor()">
+            <label for="3">3</label>
+            
+            <input type="radio" name="rating" value="4" id="4" onchange="pegarValor()">
+            <label for="4">4</label>
+            
+            <input type="radio" name="rating" value="5" id="5" onchange="pegarValor()" checked>
+            <label for="5">5</label>
+          </div>
+  
+          <button onclick="mudarPagina()">Submit</button>
+      </div>
+      <!-- Thank You div -->
+      <div id="resultado" class="resultado desligado">
+        <img src="./images/illustration-thank-you.svg" alt="">
+        <h3>You selected <span></span> out of 5</h3>
+        <h1>Thank you!</h1>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+      </div>
+      <!-- Thank You End div -->
     </div>
   </main>
-
-
-  <!-- Thank you state start -->
-
-  <!-- You selected x out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch! -->
-
-  <!-- Thank you state end -->
 
   
   <footer class="attribution">

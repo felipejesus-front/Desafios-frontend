@@ -1,4 +1,4 @@
-:root{
+:root {
     --White: #ffffff;
     --LightGrey: #959eac;
     --MediumGrey: #7c8798;
@@ -9,14 +9,14 @@
 }
 
 body {
-    margin: 0px;
+    margin: 0;
     background: var(--bg);
     font-family: 'Overpass',  sans-serif;
     color: var(--White);
     font-weight: 400;
 }
 
-h1, p, span {
+h1, h3, p, span {
     margin: 0;
 }
 
@@ -25,7 +25,7 @@ img {
     display: block;
 }
 
-.main-container{
+.main-container {
     max-width: 420px;
     margin-left: auto;
     margin-right: auto;
@@ -35,32 +35,31 @@ img {
     border-radius: 20px;
 }
 
-.star{
+.star {
     background: var(--DarkBlue);
     padding: 17px;
     border-radius: 50%;
     margin-bottom: 36px;
 }
 
-h1{
+h1 {
     margin-bottom: 20px;
     font-size: 1.875rem
 }
 
-p{
+p {
     color: var(--LightGrey);
     margin-bottom: 30px;
     max-width: 35ch;
     line-height: 1.5rem;
 }
 
-.options{
+.options {
     display: flex;
     justify-content: space-between;
-    
 }
 
-label{
+label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,7 +72,17 @@ label{
     margin-bottom: 30px;
 }
 
-button{
+label:hover {
+    background: var(--MediumGrey);
+    color: var(--White);
+}
+
+input[type="radio"]:checked+label {
+    background: var(--Orange);
+    color: var(--White);
+}
+
+button {
     width: 100%;
     padding-bottom: 15px;
     padding-top: 15px;
@@ -87,18 +96,47 @@ button{
     font-weight: 400;
     letter-spacing: 0.15rem;
     text-transform: uppercase;
-
-    
 }
 
+button:active {
+    background: var(--White);
+    color: var(--Orange);
+}
 
 input{
+    opacity: 0;
     position: absolute;
-    top: 0;
-    margin: 0;
+    pointer-events: none;
 }
 
+.resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
+.resultado img {
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 0.937rem;
+    font-weight: 400;
+    color: var(--Orange);
+    background: var(--DarkBlue);
+    padding: 5px 20px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+.resultado p {
+    margin-bottom: 0;
+}
+
+.desligado {
+    display: none;
+}
 
 .attribution {
     font-size: 11px; text-align: center;
@@ -108,12 +146,46 @@ input{
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(228, 65%, 76%);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 520px) {
+    .main-container{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .star {
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+    h1 {
+        margin-bottom: 20px;
+        font-size: 1.4rem
+    }
     .attribution{
         margin-top: 40px;
         position: inherit;
+    }
+    p {
+        margin-bottom: 20px;
+        font-size: .875rem;
+        max-width: 35ch;
+        line-height: 1.3rem;
+    }
+    label {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: var(--MediumGrey);
+        background: var(--DarkBlue);
+        margin-bottom: 30px;
+    }
+    button {
+        font-size: 0.75rem;
+        letter-spacing: 0.1rem;
+    }
+    h3{
+        font-size: .875rem;
+        margin-bottom: 20px;
     }
 }
