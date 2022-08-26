@@ -33,6 +33,7 @@ img {
     background: var(--CardDegrade);
     padding: 30px;
     border-radius: 20px;
+    box-sizing: border-box;
 }
 
 .star {
