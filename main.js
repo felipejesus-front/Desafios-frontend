@@ -12,8 +12,11 @@ function typeWriter(elemento, intervalo) {
 typeWriter(paragrafo, 40);
 
 function randomChallenger(){
-    const paginas = ['interactive-rating-component-main', 'qr-code-component-main', 'product-preview-card-component-main'];
+    const paginas = 
+    ['interactive-rating-component-main',
+     'qr-code-component-main',
+     'product-preview-card-component-main'];
     const pagina = Math.floor(Math.random() * paginas.length);
 
-    window.location.href = `./${paginas[pagina]}`;
+    window.open( `./${paginas[pagina]}`, '_blank')
 }
