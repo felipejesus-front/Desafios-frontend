@@ -18,6 +18,7 @@ body {
     font-weight: 400;
     color: var(--title);
 }
+
 h1, p, span {
     margin: 0;
 }
@@ -26,7 +27,6 @@ img {
     max-width: 100%;
     display: block;
 }
-
 
 main {
     max-width: 350px;
@@ -66,21 +66,12 @@ main {
     border-radius: 10px;
 }
 
-.hover-effect:hover{
-    opacity: 1;
-}
-
 h1{
     color: var(--title);
     margin-right: 0;
     margin-bottom: 20px;
     font-size: 1.5rem;
     transition: .3s;
-}
-
-h1:hover{
-    color: var(--text-hover);
-    cursor: pointer;
 }
 
 p, span{
@@ -113,6 +104,7 @@ p, span{
     width: 11px;
     height: 18px;
     margin-right: 5px;
+    transition: .7s;
 }
 
 .price-content span::before{
@@ -122,6 +114,7 @@ p, span{
     width: 17px;
     height: 17px;
     margin-right: 5px;
+    transition: .7s;
 }
 
 .creator-container{
@@ -147,10 +140,7 @@ p, span{
     color: var(--title);
     transition: .3s;
 }
-.creator-container span:hover{
-    color: var(--text-hover);
-    cursor: pointer;
-}
+
 
 .attribution {
     font-size: 11px; text-align: center;
@@ -172,4 +162,23 @@ p, span{
         margin-top: 40px;
         position: inherit;
     }
+}
+
+@media (hover: hover) {
+    .hover-effect:hover{
+        opacity: 1;
+    }
+    h1:hover{
+        color: var(--text-hover);
+        cursor: pointer;
+    }
+    .creator-container span:hover{
+        color: var(--text-hover);
+        cursor: pointer;
+    }
+    span:hover::before,
+    p:hover::before{
+        transform: rotate(360deg);
+    }
+
 }
