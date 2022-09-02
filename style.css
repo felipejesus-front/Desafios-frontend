@@ -8,7 +8,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10vh;
@@ -25,13 +25,16 @@ h1{
     color: #1f1f1f;
 }
 
+h3{
+    margin: 0;
+ }
 a{
     color: #1f1f1f;
     text-decoration: none;
 }
 
 a:hover{
-    color: #6C63FF;
+    color: #ffffff;
 }
 
 p::after{
@@ -40,6 +43,45 @@ p::after{
     opacity: 1;
     animation: piscar .7s infinite;
 }
+
+.card-container{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px ;
+}
+
+.card-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #6C63FF;
+    max-width: 373px;
+    padding: 20px;
+    border-radius: 0 0 10px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.card-body img{
+    border-radius: 0 0 10px 0;
+    margin-bottom: 12px;
+    max-width: 333px;
+}
+
+.card-body h3{
+    display: flex;
+    margin-bottom: 32px;
+    text-align: center;
+    text-transform: full-width
+}
+
+
+
+
 
 @keyframes piscar {
     0%, 100%{
@@ -50,8 +92,25 @@ p::after{
     }
 }
 
-@media (max-width: 800px) {
-    h1{
-        font-size: 2em;
+@media (max-width: 950px) {
+    .card-container{
+        gap: 20px ;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+    
+    .card-body img{
+        border-radius: 0 0 10px 0;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-container{
+        grid-template-columns: 1fr;
+        padding: auto;
+    }
+    .card-body{
+        margin: auto;
     }
 }
