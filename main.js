@@ -30,9 +30,9 @@ function criarCardHTML(pasta) {
     console.log(stringTratada)
 
     const card = `        <div class="card-body">
-    <a href="./${pasta.name}"><img src="https://raw.githubusercontent.com/felipejesus-front/Desafios-frontend/main/${pasta.name}/design/desktop-preview.jpg" alt=""></a>
-    <h3><a href="./${pasta.name}">${stringTratada}</a></h3>
-    <a href="./${pasta.name}">Ir para a pagina</a>
+    <a href="./${pasta.name}" target="_blank"><img src="https://raw.githubusercontent.com/felipejesus-front/Desafios-frontend/main/${pasta.name}/design/desktop-preview.jpg" alt=""></a>
+    <h3><a href="./${pasta.name}" target="_blank">${stringTratada}</a></h3>
+    <a href="./${pasta.name}" target="_blank">Ir para a pagina</a>
     </div>
     `;
     
