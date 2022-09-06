@@ -1,4 +1,4 @@
-const paragrafo = document.getElementById('paragrafo');
+const paragrafo = document.querySelector('.glass-effect p');
 const url = "https://api.github.com/repos/felipejesus-front/Desafios-frontend/contents"
 const cardsContainer = document.querySelector('#contentList');
 
@@ -11,7 +11,7 @@ function typeWriter(elemento, intervalo) {
         setTimeout(() => elemento.innerHTML += letra, intervalo * i)
     });
 }
-typeWriter(paragrafo, 40);
+typeWriter(paragrafo, 80);
 
 function randomChallenger(){
     const paginas = 
@@ -49,7 +49,7 @@ async function criarCards(){
     const repositoryJson = await repositoryDataResponse.json();
     repositoryJson.forEach((item)=>{
 
-        if(item.type === "dir"){
+        if(item.type === "dir" && item.name!= 'img'){
             preencherCard(item)
         }
     })

@@ -1,51 +1,168 @@
-body{
-    margin: 0px;
-    background: #ffffff;
-    font-family: 'Mulish';
+:root{
+    --cor-bg: #1F1E1B;
+    --cor-bg-2: #353431;
+    --white: #ffffff;
+    --primary: #C03D2B;
+    --secondary: #DF8738;
+    
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10vh;
-    padding: 0 40px;
+body{
+    margin: 0px;
+    font-family: 'Outfit';
+    background-color: var(--cor-bg);
+    color: var(--white);
 }
 
 img {
     width: 100%;
 }
 
-h1{
+h1, h3, p{
     margin: 0;
-    font-size: 4em;
-    color: #1f1f1f;
 }
-
-h3{
-    margin: 0;
- }
  
 a{
     color: #1f1f1f;
     text-decoration: none;
 }
 
-a:hover{
-    color: #6C63FF;
-    transition: .3s;
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-p::after{
+/* CSS Header */
+.header-bg{
+    width: 100%;
+    position: absolute;
+    /* background: linear-gradient(180deg, #1F1E1B 31.72%, rgba(31, 30, 27, 0.07) 99.83%); */
+    
+    background: linear-gradient(180deg, rgba(31,30,27,1) 42%, rgba(31,30,27,0) 100%);
+}
+
+.container ul {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 10px 80px;
+    place-content: center;
+    align-items:center;
+    padding:32px 0px 0px 0px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+.container li a {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    position: relative;
+    padding: 8px 16px;
+}
+
+.container li.link::after{
+    content: '';
+    display: block;
+    width: 22px;
+    height: 13px;
+    background: url(./img/arrow.svg);
+    margin: auto;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    margin-top: 5px;
+    
+}
+
+.container li.link:hover:after{
+    opacity: 100;
+    animation: flutuar .8s infinite;
+}
+
+.container li img{
+    max-width: 286px;
+}
+
+/* CSS Banner */
+.main-banner {
+    background: linear-gradient(155.31deg, rgba(139, 51, 43, 0.4) 15.75%, rgba(31, 30, 27, 0.01) 84.25%) , url('./img/photo-1550745165-9bc0b252726f-2.jpg') no-repeat center top -150px;
+    padding-top: 25vh;
+}
+
+.main-banner::after{
+    content: '';
+    display: block;
+    max-width: 100%;
+    height: 137px;
+    background: linear-gradient(0deg, rgba(31,30,27,1) 20%, rgba(31,30,27,0) 80%), url(img/wave-up.svg);
+    margin-top: 80px;
+}
+
+.banner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* css efeito de vidro e conteudo */
+.glass-effect{
+    background: linear-gradient(111.73deg, rgba(31, 30, 27, 0.4) 21.85%, rgba(31, 30, 27, 0.56) 79.34%);
+
+    padding: 120px 80px;
+    border: 1px rgba(238, 89, 72, 0.12) solid;
+    border-radius: 10px;
+
+    position: relative;
+}
+
+.glass-effect h1,
+.glass-effect p{
+    opacity: .9;
+}
+
+.glass-effect p{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.glass-effect h1{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 45px;
+    max-width: 25ch;
+    text-align: center;
+}
+
+.ruido{
+    background: url(img/ruido.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    opacity: 0.2;
+    border-radius: 10px;
+}
+
+
+
+/* animação de barra de escrever */
+/* .glass-effect p::after{
     content: "|";
     margin-left: 5px;
     opacity: 1;
     animation: piscar .7s infinite;
-}
+} */
 
+
+
+/* CSS dos cards */
 .card-container{
     max-width: 1200px;
     margin-left: auto;
@@ -63,13 +180,14 @@ p::after{
     background-color: #6C63FF;
     max-width: 373px;
     padding: 20px;
-    border-radius: 0 0 10px 0;
+    border-radius: 20px 20px 48px 20px;
     box-sizing: border-box;
     margin: 0 auto;
+    box-shadow: inset 10px 0 rgb(255 255 255 / 70%), inset -10px 0 rgb(0 0 0 / 20%);
 }
 
 .card-body img{
-    border-radius: 0 0 10px 0;
+    border-radius: 4px  4px 12px 4px;
     margin-bottom: 12px;
     max-width: 333px;
 }
@@ -78,15 +196,12 @@ p::after{
     display: flex;
     margin-bottom: 32px;
     text-align: center;
-    text-transform: full-width
+    text-transform: full-width;
 }
 
 .card-body a:hover {
     color: #ffffff;
 }
-
-
-
 
 
 @keyframes piscar {
@@ -98,7 +213,42 @@ p::after{
     }
 }
 
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0)
+      }
+      50% {
+        transform: translateY(5px)
+      }
+}
+
+@media (min-width: 1500px) {
+    .main-banner{
+        background-size:  100% auto;
+    }
+}
+
 @media (max-width: 950px) {
+    .container ul {
+        gap: 10px 20px;
+ 
+    }
+    .glass-effect p{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 20px;
+        margin-left: 1.4rem;
+    }
+    
+    .glass-effect h1{
+        font-weight: 600;
+        font-size: 24px;
+        
+        max-width: 25ch;
+        text-align: center;
+    }
+    
     .card-container{
         gap: 20px ;
         grid-template-columns: repeat(2, 1fr);
@@ -112,6 +262,11 @@ p::after{
 }
 
 @media (max-width: 600px) {
+    .glass-effect{
+        padding: 40px 20px;
+        margin: auto 20px;
+    }
+
     .card-container{
         grid-template-columns: 1fr;
         padding: auto;
