@@ -161,8 +161,103 @@ a{
 } */
 
 
+/* CSS da intro */
+
+.intro-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.intro-container::after{
+    content: '';
+    display: block;
+    width:124px;
+    height:140px;
+    background: url(img/marca2-s.svg);
+    position: absolute;
+    bottom: calc((-69px) - (+80px) );
+
+}
+
+.image-container{
+    background: url(./img/avatar.png) no-repeat;
+    background-size: 90% 90%;
+    background-position: center;
+    width: 375px;
+    height: 375px;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 20px 40px rgba(31, 30, 27, 1);
+}
+
+.text-container p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 40ch;
+}
+
+.text-container:after{
+    content: '';
+    display: block;
+    width: 22px;
+    height: 33px;
+    background: url(./img/ScrollSinal.svg);
+    margin: 20px auto 0 auto;
+    animation: flutuar .8s infinite;
+}
+
+.secondary{
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+.primary{
+    font-weight: 500;
+    color: var(--primary);
+    position: relative;
+}
+
+.primary::after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+    
+}
+
+.primary:hover::after{
+    animation: piscar .8s infinite;
+
+    
+}
+
+.text-container p:first-child{
+    margin-bottom: 40px;
+}
 
 /* CSS dos cards */
+
+.card-bg{
+    background: #353431;
+}
+
+.card-bg::before{
+    content: '';
+    display: block;
+    max-width: 100%;
+    height: 137px;
+    background: linear-gradient(180deg, rgba(31,30,27,1) 20%, rgba(31,30,27,0) 80%), url(img/wave-down.svg);
+    margin-top: 80px;
+}
+
 .card-container{
     max-width: 1200px;
     margin-left: auto;
@@ -248,11 +343,25 @@ a{
         max-width: 25ch;
         text-align: center;
     }
-    
+
+    .intro-container{
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .image-container,
+    .text-container p{
+        margin: 0 auto;
+    }
+
     .card-container{
         gap: 20px ;
         grid-template-columns: repeat(2, 1fr);
         padding: 20px;
+    }
+    .intro-container::after{
+        display: none;
     }
     
     .card-body img{
@@ -273,5 +382,10 @@ a{
     }
     .card-body{
         margin: auto;
+    }
+    .image-container{
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
     }
 }
