@@ -61,9 +61,12 @@
     padding: 8px 16px;
 }
 
-.card-body a:hover {
-    color: var(--primary);
+@media (hover:hover) {
+    .card-body a:hover {
+        color: var(--primary);
+    }
 }
+
 
 @media (max-width: 950px) {
     .card-container{

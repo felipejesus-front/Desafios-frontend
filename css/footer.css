@@ -61,13 +61,17 @@ footer ul li{
     margin-bottom: 8px;
 }
 
-footer a:hover {
-    color: var(--primary);
-}
+
 
 .footer-copy{
     grid-column: 1/-1;
     margin-bottom: 20px;
+}
+
+@media (hover:hover) {
+    footer a:hover {
+        color: var(--primary);
+    }
 }
 
 @media (max-width: 950px) {

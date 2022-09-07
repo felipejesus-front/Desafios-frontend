@@ -102,10 +102,6 @@ a{
     position: absolute;
 }
 
-.primary:hover::after{
-    animation: piscar .8s infinite;
-}
-
 /* animação de barra de escrever */
 .glass-effect p::after{
     content: "|";
@@ -141,6 +137,12 @@ a{
       50% {
         transform: translateY(5px)
       }
+}
+
+@media (hover:hover) {
+    .primary:hover::after{
+        animation: piscar .8s infinite;
+    }
 }
 
 @media (max-width: 950px) {
