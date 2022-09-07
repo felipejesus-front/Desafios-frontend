@@ -1,0 +1,84 @@
+/* CSS Banner */
+.main-banner{
+    background: linear-gradient(155.31deg, rgba(139, 51, 43, 0.4) 15.75%, rgba(31, 30, 27, 0.01) 84.25%) , url(../img/photo-1550745165-9bc0b252726f-2.jpg) no-repeat center top -150px;
+    padding-top: 25vh;
+}
+
+.main-banner::after{
+    content: '';
+    display: block;
+    max-width: 100%;
+    height: 137px;
+    background: linear-gradient(0deg, rgba(31,30,27,1) 20%, rgba(31,30,27,0) 80%), url(../img/wave-up.svg);
+    margin-top: 80px;
+}
+
+.banner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.title-box{
+    padding: 120px 80px;
+    position: relative;
+}
+
+.title-box h1,
+.title-box p{
+    opacity: .9;
+}
+
+.title-box p{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.title-box h1{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 45px;
+    max-width: 25ch;
+    text-align: center;
+}
+
+.ruido{
+    background: url(../img/ruido.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    opacity: 0.2;
+    border-radius: 10px;
+    filter: blur(1px);
+}
+
+/* DEIXAR O BACKGROUND RESPONSIVO QUANDO A TELA ESTIVER MUITO GRANDE */
+@media (min-width: 1500px) {
+    .main-banner{
+        background-size:  100% auto;
+    }
+}
+
+@media (max-width: 950px) {
+    .title-box p{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 20px;
+        margin-left: 1.4rem;
+    }
+    .title-box h1{
+        font-weight: 600;
+        font-size: 24px;
+
+        max-width: 25ch;
+        text-align: center;
+    }
+}

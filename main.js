@@ -49,7 +49,13 @@ async function criarCards(){
     const repositoryJson = await repositoryDataResponse.json();
     repositoryJson.forEach((item)=>{
 
-        if(item.type === "dir" && item.name!= 'img'){
+        function checkFolders(){
+            if (item.type === "dir" && item.name != 'img' && item.name != 'css') {
+                return true
+            }
+        }
+
+        if(checkFolders()){
             preencherCard(item)
         }
     })
