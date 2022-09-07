@@ -31,15 +31,14 @@
     display: block;
     width: 22px;
     height: 13px;
-    background: url(./img/arrow.svg);
+    background: url(../img/arrow.svg);
     margin: auto;
     opacity: 0;
     transition: 0.3s ease-in-out;
     margin-top: 5px;
-
 }
 
-.header-ul li.link:hover:after{
+li.link:hover:after{
     opacity: 100;
     animation: flutuar .8s infinite;
 }

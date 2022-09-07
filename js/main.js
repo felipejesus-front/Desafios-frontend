@@ -29,11 +29,12 @@ function criarCardHTML(pasta) {
     const stringTratada = (stringPura.charAt(0).toUpperCase() + stringPura.slice(1)).replace(/-/g,' ');
     console.log(stringTratada)
 
-    const card = `        <div class="card-body">
-    <a href="./${pasta.name}" target="_blank"><img src="https://raw.githubusercontent.com/felipejesus-front/Desafios-frontend/main/${pasta.name}/design/desktop-preview.jpg" alt=""></a>
-    <h3><a href="./${pasta.name}" target="_blank">${stringTratada}</a></h3>
-    <a href="./${pasta.name}" target="_blank">Ir para a pagina</a>
-    </div>
+    const card = `    <div class="glass-effect title-box card-body">
+        <a href="./${pasta.name}" target="_blank"><img src="https://raw.githubusercontent.com/felipejesus-front/Desafios-frontend/main/${pasta.name}/design/desktop-preview.jpg" alt=""></a>
+        <h3><a href="./${pasta.name}" target="_blank">${stringTratada}</a></h3>
+        <a href="./${pasta.name}" target="_blank" class="button">Ir para a pagina</a>
+        <div class="ruido"></div>
+        </div>
     `;
     
     return card;
@@ -50,7 +51,7 @@ async function criarCards(){
     repositoryJson.forEach((item)=>{
 
         function checkFolders(){
-            if (item.type === "dir" && item.name != 'img' && item.name != 'css') {
+            if (item.type === "dir" && item.name != 'img' && item.name != 'css' && item.name != 'js') {
                 return true
             }
         }
@@ -61,3 +62,8 @@ async function criarCards(){
     })
 }
 criarCards();
+
+
+if(window.SimpleAnime){
+    new SimpleAnime();
+}
